@@ -67,8 +67,23 @@ $(".btn").on("click", function() {
 
 // Total Score for User
 	totalScore.innerHTML = parseInt(totalScore.innerHTML) + localVariable;
-})
 
-
+	
+});
 
 // Create if statements for wins/losses
+   if (totalScore === scoreToMatch) {
+   	wins++;
+   	$("#wins").html(wins);
+   	console.log(wins);
+   }
+
+   else {
+   	losses++;
+   	$("#losses").html(losses);
+   	console.log(losses);
+   }
+
+
+
+	
