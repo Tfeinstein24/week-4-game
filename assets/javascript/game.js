@@ -1,16 +1,20 @@
 // CREATE GLOBAL VARIABLES TO GRAB HTML ELEMENTS
-console.log(document)
+console.log(document);
 // VANILLA JAVASCRIPT WAY OF ASSIGNING JAVASCRIPT VARIABLES TO HTML ELEMENTS
+
+var scoreToMatch = 0;
 var scoreToMatch = document.getElementById("scoreToMatch");
 console.log(scoreToMatch);
 
 
 // JQUERY WAY OF ASSIGNING JAVASCRIPT VARIABLES TO HTML ELEMENTS
-var wins = $("#wins")[0];
+var wins = 0;
+$("#wins").text(wins);
 console.log(wins);
 
 // JQUERY WAY OF ASSIGNING JAVASCRIPT VARIABLES TO HTML ELEMENTS
-var losses = $("#losses")[0];
+var losses = 0;
+$("#losses").text(losses);
 console.log(losses);
 
 // Create Button Variables
@@ -27,6 +31,7 @@ var green = document.getElementById("green");
 console.log(green);
 
 // Create Total Score Variable
+var totalScore = 0;
 var totalScore = $("#totalScore")[0];
 console.log(totalScore);
 totalScore.innerHTML = 0;
@@ -69,21 +74,25 @@ $(".btn").on("click", function() {
 	totalScore.innerHTML = parseInt(totalScore.innerHTML) + localVariable;
 
 	
-});
+
 
 // Create if statements for wins/losses
+	
    if (totalScore === scoreToMatch) {
    	wins++;
-   	$("#wins").html(wins);
+   	$("#wins").text(wins);
+   	$('#wins').html("wins: " + wins);
    	console.log(wins);
    }
 
-   else {
+   else if (totalScore > scoreToMatch) {
    	losses++;
-   	$("#losses").html(losses);
+   	$("#losses").text(losses);
+   	$('#losses').html("losses: " + wins);
    	console.log(losses);
    }
 
+});
 
 
 	
