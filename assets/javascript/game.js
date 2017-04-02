@@ -73,7 +73,10 @@ $(".btn").on("click", function() {
 // Total Score for User
 	totalScore.innerHTML = parseInt(totalScore.innerHTML) + localVariable;
 
-	
+var reset = function() {
+scoreToMatch.innerHTML = getRandomInt(40, 120);
+totalScore.innerHTML = 0;
+}	
 
 
 // Create if statements for wins/losses
@@ -82,12 +85,14 @@ $(".btn").on("click", function() {
    	wins++;
    	$("#wins").text(wins);
    	console.log(wins);
+   	reset();
    }
 
    else if (totalScore.innerHTML > scoreToMatch.innerHTML) {
    	losses++;
    	$("#losses").text(losses);
    	console.log(losses);
+   	reset();
    }
 
 });
