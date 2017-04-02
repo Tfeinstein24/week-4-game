@@ -78,17 +78,15 @@ $(".btn").on("click", function() {
 
 // Create if statements for wins/losses
 	
-   if (totalScore === scoreToMatch) {
+   if (totalScore.innerHTML === scoreToMatch.innerHTML) {
    	wins++;
    	$("#wins").text(wins);
-   	$('#wins').html("wins: " + wins);
    	console.log(wins);
    }
 
-   else if (totalScore > scoreToMatch) {
+   else if (totalScore.innerHTML > scoreToMatch.innerHTML) {
    	losses++;
    	$("#losses").text(losses);
-   	$('#losses').html("losses: " + wins);
    	console.log(losses);
    }
 

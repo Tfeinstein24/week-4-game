@@ -1,0 +1,18 @@
+* {box-sizing: border-box;}
+
+.jumbotron {
+background-color: #a69de1;
+};
+
+h5 {
+font-size: 30px;
+};
+
+.row {
+background-color: #a69de1;	
+};
+
+img {
+width: 150px;
+height: 150px;
+};
